@@ -1,0 +1,36 @@
+// _footer.scss
+.site-footer {
+    background: $bg-secondary;
+    padding: 3rem 0 1.5rem;
+    border-top: 1px solid $border;
+    margin-top: 3rem;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    p {
+        color: $text-secondary;
+        font-size: 0.9rem;
+    }
+
+    .social {
+        display: flex;
+        gap: 1.5rem;
+
+        a {
+            font-size: 1.5rem;
+            color: $accent;
+            transition: $transition;
+
+            &:hover {
+                color: $geo;
+                transform: translateY(-3px);
+            }
+        }
+    }
+}

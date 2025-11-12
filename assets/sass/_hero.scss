@@ -1,0 +1,81 @@
+// _hero.scss
+.hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .hero-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.4) contrast(1.2);
+        z-index: -1;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at center, transparent 30%, $bg-primary 100%);
+        z-index: 0;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 2rem;
+        animation: fadeInUp 1.5s ease-out;
+
+        h1 {
+            font-family: $font-title;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: $geo;
+            @include glow($geo-glow, 15px);
+        }
+
+        p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: $text-secondary;
+        }
+
+        .cta {
+            display: inline-block;
+            background: linear-gradient(45deg, $accent, $accent-glow);
+            color: #000;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: $transition;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 0 30px rgba(0, 212, 255, 0.8);
+            }
+        }
+    }
+
+    @include respond(tablet) {
+        h1 { font-size: 2.5rem; }
+        p { font-size: 1.1rem; }
+    }
+
+    @include respond(mobile) {
+        h1 { font-size: 2rem; }
+    }
+}

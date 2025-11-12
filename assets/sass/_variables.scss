@@ -1,0 +1,21 @@
+// _variables.scss
+$bg-primary: #0a0a0a;
+$bg-secondary: #111111;
+$bg-card: #1a1a1a;
+$accent: #00d4ff;
+$accent-glow: #00ffff;
+$text-primary: #e0e0e0;
+$text-secondary: #aaaaaa;
+$geo: #ffcc00;
+$geo-glow: #ffeb3b;
+$border: #333333;
+$radius: 12px;
+$transition: all 0.3s ease;
+
+$font-title: 'Cinzel', serif;
+$font-body: 'Roboto Mono', monospace;
+
+$breakpoints: (
+    tablet: 768px,
+    mobile: 480px
+);

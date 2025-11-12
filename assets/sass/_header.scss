@@ -1,0 +1,106 @@
+// _header.scss
+.site-header {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid $border;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+    }
+
+    .logo {
+        height: 50px;
+        filter: drop-shadow(0 0 6px $geo-glow);
+        transition: $transition;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: $accent;
+        font-size: 1.8rem;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
+
+    .nav-list {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+
+        a {
+            font-family: $font-title;
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: $radius;
+            position: relative;
+            transition: $transition;
+            color: $text-primary;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background: $geo;
+                transition: $transition;
+                transform: translateX(-50%);
+            }
+
+            &:hover::after,
+            &.active::after {
+                width: 80%;
+            }
+
+            &.active {
+                color: $geo;
+                @include glow($geo-glow);
+            }
+        }
+    }
+
+    @include respond(tablet) {
+        .menu-toggle { display: block; }
+        .nav-list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: $bg-secondary;
+            flex-direction: column;
+            gap: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            border-top: 1px solid $border;
+
+            &.active {
+                max-height: 500px;
+                padding: 1rem 0;
+            }
+
+            a {
+                padding: 1rem 1.5rem;
+                display: block;
+                border-bottom: 1px solid $border;
+            }
+        }
+    }
+}
