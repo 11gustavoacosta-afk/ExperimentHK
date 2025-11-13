@@ -1,4 +1,7 @@
 // _footer.scss
+@use 'variables' as *;
+@use 'mixins' as *;
+
 .site-footer {
     background: $bg-secondary;
     padding: 3rem 0 1.5rem;

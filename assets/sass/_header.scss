@@ -1,4 +1,8 @@
 // _header.scss
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'sass:map';
+
 .site-header {
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
@@ -69,10 +73,10 @@
                 width: 80%;
             }
 
-            &.active {
-                color: $geo;
-                @include glow($geo-glow);
-            }
+     &.active {
+         color: $geo;
+         @include glow($geo-glow);  // AHORA SÍ FUNCIONA
+          }
         }
     }
 

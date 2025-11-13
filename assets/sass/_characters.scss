@@ -1,4 +1,7 @@
 // _characters.scss
+@use 'variables' as *;  // ← ¡ESTO FALTABA!
+@use 'mixins' as *;
+
 .character-card {
     background: $bg-card;
     border-radius: $radius;

@@ -1,4 +1,7 @@
 // _hero.scss
+@use 'variables' as *;
+@use 'mixins' as *;
+
 .hero {
     position: relative;
     height: 100vh;
@@ -71,11 +74,17 @@
     }
 
     @include respond(tablet) {
-        h1 { font-size: 2.5rem; }
-        p { font-size: 1.1rem; }
+        h1 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.1rem;
+        }
     }
 
     @include respond(mobile) {
-        h1 { font-size: 2rem; }
+        h1 {
+            font-size: 2rem;
+        }
     }
 }

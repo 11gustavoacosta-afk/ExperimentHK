@@ -1,4 +1,7 @@
 // _gallery.scss
+@use 'variables' as *;
+@use 'mixins' as *;
+
 .quick-gallery {
     background: $bg-secondary;
     padding: 5rem 0;

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amuletos - Hollow Knight Fanpage</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a href="../index.html" class="logo-link">
+                <img src="../assets/img/logo.png" alt="Hollow Knight Logo" class="logo">
+            </a>
+            <nav class="main-nav">
+                <button class="menu-toggle" aria-label="Menú">Menu</button>
+                <ul class="nav-list">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./about.html">Sobre</a></li>
+                    <li><a href="./characters.html">Personajes</a></li>
+                    <li><a href="./lore.html">Lore</a></li>
+                    <li><a href="./silksong.html">Silksong</a></li>
+                    <li><a href="./bosses.html">Jefes</a></li>
+                    <li><a href="./charms.html" class="active">Amuletos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="charms-hero">
+            <div class="hero-content">
+                <h1>Amuletos de Hallownest</h1>
+                <p>45 amuletos. 11 ranuras. Infinitas combinaciones.</p>
+                <div class="charm-slots">
+                    <span class="slot empty"></span>
+                    <span class="slot empty"></span>
+                    <span class="slot empty"></span>
+                    <span class="slot empty"></span>
+                    <span class="slot empty"></span>
+                    <span class="slot empty"></span>
+                    <span class="slot empty"></span>
+                    <span class="slot empty"></span>
+                    <span class="slot empty"></span>
+                    <span class="slot empty"></span>
+                    <span class="slot empty"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filtros -->
+        <section class="charm-filters">
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="offensive">Ofensivos</button>
+                <button class="filter-btn" data-filter="defensive">Defensivos</button>
+                <button class="filter-btn" data-filter="utility">Utilidad</button>
+                <button class="filter-btn" data-filter="soul">Alma</button>
+            </div>
+        </section>
+
+        <!-- Grid de Amuletos -->
+        <section class="charms-grid">
+            <!-- Wayward Compass -->
+            <article class="charm-card" data-category="utility">
+                <div class="charm-img">
+                    <img src="../assets/img/knight.png" alt="Wayward Compass">
+                </div>
+                <div class="charm-info">
+                    <h3>Wayward Compass</h3>
+                    <div class="charm-cost">1</div>
+                    <p class="charm-location">Iselda - Dirtmouth</p>
+                    <p class="charm-desc">Muestra tu ubicación en el mapa. Esencial para exploradores.</p>
+                </div>
+            </article>
+
+            <!-- Soul Catcher -->
+            <article class="charm-card" data-category="soul">
+                <div class="charm-img">
+                    <img src="../assets/img/radiance.png" alt="Soul Catcher">
+                </div>
+                <div class="charm-info">
+                    <h3>Soul Catcher</h3>
+                    <div class="charm-cost">2</div>
+                    <p class="charm-location">Ancestral Mound</p>
+                    <p class="charm-desc">Aumenta el alma recolectada de enemigos.</p>
+                </div>
+            </article>
+
+            <!-- Grubsong -->
+            <article class="charm-card" data-category="soul">
+                <div class="charm-img">
+                    <img src="../assets/img/hornet.png" alt="Grubsong">
+                </div>
+                <div class="charm-info">
+                    <h3>Grubsong</h3>
+                    <div class="charm-cost">1</div>
+                    <p class="charm-location">Grubfather (38 larvas)</p>
+                    <p class="charm-desc">Gana alma al recibir daño. Riesgo y recompensa.</p>
+                </div>
+            </article>
+
+            <!-- Sharp Shadow -->
+            <article class="charm-card" data-category="offensive">
+                <div class="charm-img">
+                    <img src="../assets/img/knight.png" alt="Sharp Shadow">
+                </div>
+                <div class="charm-info">
+                    <h3>Sharp Shadow</h3>
+                    <div class="charm-cost">2</div>
+                    <p class="charm-location">Shade Cloak</p>
+                    <p class="charm-desc">Daño al atravesar enemigos con Sombra. Velocidad letal.</p>
+                </div>
+            </article>
+
+            <!-- Quick Slash -->
+            <article class="charm-card" data-category="offensive">
+                <div class="charm-img">
+                    <img src="../assets/img/radiance.png" alt="Quick Slash">
+                </div>
+                <div class="charm-info">
+                    <h3>Quick Slash</h3>
+                    <div class="charm-cost">3</div>
+                    <p class="charm-location">Colosseum</p>
+                    <p class="charm-desc">Aumenta velocidad de ataque. DPS brutal.</p>
+                </div>
+            </article>
+
+            <!-- Shaman Stone -->
+            <article class="charm-card" data-category="soul">
+                <div class="charm-img">
+                    <img src="../assets/img/hornet.png" alt="Shaman Stone">
+                </div>
+                <div class="charm-info">
+                    <h3>Shaman Stone</h3>
+                    <div class="charm-cost">3</div>
+                    <p class="charm-location">Salubra</p>
+                    <p class="charm-desc">Hechizos más fuertes y grandes. Magia devastadora.</p>
+                </div>
+            </article>
+
+            <!-- Lifeblood Core -->
+            <article class="charm-card" data-category="defensive">
+                <div class="charm-img">
+                    <img src="../assets/img/knight.png" alt="Lifeblood Core">
+                </div>
+                <div class="charm-info">
+                    <h3>Lifeblood Core</h3>
+                    <div class="charm-cost">4</div>
+                    <p class="charm-location">Abyss</p>
+                    <p class="charm-desc">+4 máscaras de vida azul. Sobrevive lo imposible.</p>
+                </div>
+            </article>
+
+            <!-- Dream Wielder -->
+            <article class="charm-card" data-category="utility">
+                <div class="charm-img">
+                    <img src="../assets/img/radiance.png" alt="Dream Wielder">
+                </div>
+                <div class="charm-info">
+                    <h3>Dream Wielder</h3>
+                    <div class="charm-cost">1</div>
+                    <p class="charm-location">Seer</p>
+                    <p class="charm-desc">Más daño con Dream Nail. Esencia rápida.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Build Recomendadas -->
+        <section class="builds-section">
+            <h2>Builds Legendarias</h2>
+            <div class="builds-grid">
+                <div class="build-card">
+                    <h3>Glass Cannon</h3>
+                    <div class="build-charms">
+                        <span>Quick Slash</span>
+                        <span>Shaman Stone</span>
+                        <span>Spell Twister</span>
+                    </div>
+                    <p>Daño máximo. Frágil pero letal.</p>
+                </div>
+                <div class="build-card">
+                    <h3>Tank Inmortal</h3>
+                    <div class="build-charms">
+                        <span>Lifeblood Core</span>
+                        <span>Grubberfly's Elegy</span>
+                        <span>Joni's Blessing</span>
+                    </div>
+                    <p>Supervivencia extrema.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estadísticas -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>45</h3>
+                    <p>Amuletos totales</p>
+                </div>
+                <div class="stat-item">
+                    <h3>11</h3>
+                    <p>Ranuras máximas</p>
+                </div>
+                <div class="stat-item">
+                    <h3>36</h3>
+                    <p>Notches totales</p>
+                </div>
+                <div class="stat-item">
+                    <h3>8</h3>
+                    <p>Overcharmed</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Hollow Knight Fanpage. No oficial. Hecho con <span class="geo-glow">Geo</span></p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Filtro de amuletos
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                document.querySelectorAll('.charm-card').forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

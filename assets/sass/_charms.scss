@@ -1,0 +1,239 @@
+// _charms.scss
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.charms-hero {
+    background: linear-gradient(135deg, $bg-primary 0%, #0a1a2e 100%);
+    padding: 6rem 0 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: radial-gradient(circle at center, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+        pointer-events: none;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+        @include glow($accent-glow, 20px);
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 1.4rem;
+        color: $text-secondary;
+        margin-bottom: 2rem;
+    }
+
+    .charm-slots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .slot {
+        width: 36px;
+        height: 36px;
+        border: 2px solid $border;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        position: relative;
+
+        &.empty::after {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 12px; height: 12px;
+            background: $border;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.charm-filters {
+    padding: 2rem 0;
+    text-align: center;
+    background: $bg-secondary;
+
+    .filter-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        background: $bg-card;
+        color: $text-primary;
+        border: 1px solid $border;
+        padding: 0.7rem 1.5rem;
+        border-radius: 50px;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: $transition;
+
+        &.active,
+        &:hover {
+            background: $accent;
+            color: #000;
+            border-color: $accent;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+        }
+    }
+}
+
+.charms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.charm-card {
+    background: $bg-card;
+    border-radius: $radius;
+    overflow: hidden;
+    border: 1px solid $border;
+    transition: $transition;
+    display: flex;
+
+    &:hover {
+        transform: translateY(-10px);
+        border-color: $accent;
+        box-shadow: 0 15px 35px rgba(0, 212, 255, 0.2);
+    }
+
+    .charm-img {
+        width: 120px;
+        height: 120px;
+        background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+
+        img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px $accent-glow);
+        }
+    }
+
+    .charm-info {
+        padding: 1.2rem;
+        flex: 1;
+    }
+
+    h3 {
+        font-family: $font-title;
+        font-size: 1.4rem;
+        color: $accent;
+        margin-bottom: 0.5rem;
+    }
+
+    .charm-cost {
+        display: inline-block;
+        background: $geo;
+        color: #000;
+        font-weight: bold;
+        padding: 0.2rem 0.6rem;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .charm-location {
+        color: $text-secondary;
+        font-size: 0.85rem;
+        margin-bottom: 0.8rem;
+        font-style: italic;
+    }
+
+    .charm-desc {
+        color: $text-primary;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+.builds-section {
+    background: $bg-secondary;
+    padding: 4rem 0;
+    margin: 4rem 0;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+        @include glow($geo-glow);
+    }
+
+    .builds-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .build-card {
+        background: $bg-card;
+        padding: 2rem;
+        border-radius: $radius;
+        border: 1px solid $border;
+        text-align: center;
+
+        h3 {
+            font-family: $font-title;
+            color: $accent;
+            margin-bottom: 1rem;
+        }
+
+        .build-charms {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin: 1rem 0;
+
+            span {
+                background: rgba(0, 212, 255, 0.1);
+                padding: 0.4rem;
+                border-radius: 6px;
+                font-size: 0.9rem;
+                color: $accent;
+            }
+        }
+
+        p {
+            color: $text-secondary;
+            font-style: italic;
+        }
+    }
+}
+
+.stats-section {
+    padding: 4rem 0;
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .stat-item h3 {
+        font-family: $font-title;
+        font-size: 3rem;
+        color: $geo;
+        @include glow($geo-glow);
+    }
+
+    .stat-item p {
+        color: $text-secondary;
+        font-size: 1.1rem;
+    }
+}

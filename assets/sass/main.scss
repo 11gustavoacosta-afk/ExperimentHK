@@ -1,9 +1,26 @@
 // main.scss
+
+// 1. Forward mixins para que otros partials los vean
+@forward 'mixins';
+
+// 2. IMPORTAR mixins AQUÍ para usar en main.scss
+@use 'mixins' as *;   // ← ¡ESTO ES LO QUE FALTABA!
+@use 'variables' as *;
+
+// 3. Importar partials
+@use 'header';
+@use 'hero';
+@use 'gallery';
+@use 'characters';
+@use 'content';
+@use 'footer';
+@use 'bosses';  // ← Agrega esta línea después de 'footer'
+@use 'charms';  // ← Después de 'footer'
+
+// 4. Fuentes
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap');
 
-@import 'variables';
-@import 'mixins';
-
+// 5. Reglas base
 *,
 *::before,
 *::after {
@@ -44,41 +61,15 @@ a {
 
     &:hover {
         color: $accent-glow;
-        @include glow($accent-glow);
+        @include glow($accent-glow);  // ← AHORA FUNCIONA
     }
 }
 
-@mixin section-title {
-    font-family: $font-title;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: $geo;
-    position: relative;
-
-    &::after {
-        content: '';
-        display: block;
-        width: 80px;
-        height: 3px;
-        background: $geo;
-        margin: 1rem auto;
-        border-radius: 2px;
-        box-shadow: 0 0 10px $geo-glow;
-    }
+section {
+    padding: 5rem 0;
 }
-
-section { padding: 5rem 0; }
-h2 { @include section-title; }
 
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
-@import 'header';
-@import 'hero';
-@import 'gallery';
-@import 'characters';
-@import 'content';
-@import 'footer';
